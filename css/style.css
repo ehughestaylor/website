@@ -93,7 +93,7 @@ div.dropdown {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  left: 39%;
   right: 0;
   top: 44px;
   height: 355px;
@@ -129,7 +129,8 @@ div.home-top {
   background: #1C1A1A; }
   div.home-top h1 {
     font-size: 4.2em;
-    height: 300px;
+    min-height: 300px;
+    max-height: 1122px;
     position: relative;
     line-height: 1.3em;
     padding-top: 1.5em;
@@ -146,10 +147,17 @@ div.home-top {
 div.home-bottom {
   background-color: black; }
   div.home-bottom div.project-left {
-    background-color: #8C2E00;
+    background-size: 100% 100%;
+    background: #6cab26;
+    background: -webkit-linear-gradient(left, rgba(215, 217, 35, 0.4), rgba(50, 51, 3, 0.4)), url("../images/stock.jpg");
+    background: -o-linear-gradient(left, rgba(215, 217, 35, 0.4), rgba(50, 51, 3, 0.4)), url("../images/stock.jpg");
+    background: linear-gradient(to right, rgba(215, 217, 35, 0.4), rgba(50, 51, 3, 0.4)), url("../images/stock.jpg");
+    background-size: cover;
+    background-position: center;
     width: 49.5%;
     display: inline-block;
-    height: 452px;
+    min-height: 452px;
+    max-height: 882px;
     margin: 0;
     padding: 0; }
     div.home-bottom div.project-left h1 {
@@ -160,10 +168,21 @@ div.home-bottom {
       float: right;
       color: white;
       margin-right: 1em;
-      margin-top: 0.5em; }
+      margin-top: 0.5em;
+      cursor: pointer; }
+    div.home-bottom div.project-left h1:hover {
+      color: #1C1A1A;
+      background-color: white; }
   div.home-bottom div.about-right {
-    background-color: #1C1A1A;
-    height: 452px;
+    background-size: 100% 100%;
+    background: #6cab26;
+    background: -webkit-linear-gradient(right, rgba(48, 35, 174, 0.4), rgba(200, 109, 215, 0.4)), url("../images/stock.jpg");
+    background: -o-linear-gradient(right, rgba(48, 35, 174, 0.4), rgba(200, 109, 215, 0.4)), url("../images/stock.jpg");
+    background: linear-gradient(to left, rgba(48, 35, 174, 0.4), rgba(200, 109, 215, 0.4)), url("../images/stock.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 452px;
+    max-height: 882px;
     width: 49.5%;
     margin: 0;
     padding: 0;
@@ -176,7 +195,11 @@ div.home-bottom {
       float: left;
       color: white;
       margin-left: 1em;
-      margin-top: 0.5em; }
+      margin-top: 0.5em;
+      cursor: pointer; }
+    div.home-bottom div.about-right h1:hover {
+      background-color: white;
+      color: #1C1A1A; }
 
 /*PAGE LOADER*/
 .se-pre-con {
@@ -234,6 +257,10 @@ figure {
   -webkit-animation: rotate 3s infinite linear; }
 
 /*MEDIA QUERIES*/
+@media only screen and (max-width: 800px) {
+  div.home-bottom div.project-left,
+  div.home-bottom div.about-right {
+    width: 100%; } }
 @media only screen and (max-width: 600px) {
   div.dropdown {
     right: 0;
