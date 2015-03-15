@@ -55,20 +55,26 @@ $darkgrey:#1C1A1A;
 $orange:#8C2E00;
 $gold:#D7D923;
 
+$mainfont: 'Noto Serif', serif;
+$secondfont: 'Roboto', sans-serif;
+
 
 body{
-	background-color: $darkgrey;	
+	background-color: $darkgrey;
+	font-family: $mainfont;	
 }
 .opaque{
 	transition-duration:0.5s;
 	transform:rotate(360deg);
 }
 nav{
-	background-color: $darkgrey;
-	height: 45px;
-	z-index: 9999;
-	position: absolute;
-	width: 100%;
+  background-color: $darkgrey;
+  box-shadow: 1px 1px 3px black;
+  height: 45px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
 	
 	/*social media section*/
 	div.social-media{
@@ -119,7 +125,7 @@ div.dropdown{
 	  height: 0; 
 	  border-left: 335px solid transparent;
 	  border-right: 335px solid transparent;
-	  border-top: 335px solid $darkgrey;
+	  border-top: 335px solid rgba(0,0,0,0.7);
 	ul{
 		  text-align: center;
 		  position: absolute;
@@ -149,28 +155,67 @@ div.dropdown{
 }
 
 div.home-top{
-	height: 400px;
-	background: white;
+	height: 502px;
+	background: $darkgrey;
+	h1{
+	  font-size: 4.2em;
+	  height: 300px;
+	  position: relative;
+	  line-height: 1.3em;
+	  padding-top: 1.5em;
+	  width: 90%;
+	  margin: 0 auto;
+	  color: white;
+	}
+	@media only screen and (max-width: 630px){
+		h1{
+			font-size: 3.6em;
+			padding-top: 1.6em;
+			width: 100%;
+			text-align: center;
+		}
+	}
 }
 
 div.home-bottom{
-	background-color: white;
-	div.about-left{
-		background-color: $darkgrey;
-		height: 300px;	
-		width: 49.5%;
-		margin:0;
-		padding: 0;
-		display: inline-block;
-	}
-	div.project-right{
+	background-color: black;
+	div.project-left{
 		background-color: $orange;
 		width: 49.5%;
 		display: inline-block;
-		height: 300px;
+		height: 452px;
 		margin:0;
 		padding: 0;
+		h1{
+			font-size: 1.6em;
+			border: 3px solid white;
+			padding: 0.5em;
+			display: inline;
+			float: right;
+			color: white;
+			margin-right: 1em;
+			margin-top: 0.5em;
+		}
 	}
+	div.about-right{
+		background-color: $darkgrey;
+		height: 452px;	
+		width: 49.5%;
+		margin:0;
+		padding: 0;
+		display: inline-block;
+		h1{
+			font-size: 1.6em;
+			border: 3px solid white;
+			padding: 0.5em;
+			display: inline;
+			float: left;
+			color: white;
+			margin-left: 1em;
+			margin-top: 0.5em;
+		}
+	}
+
 }
 
 /*PAGE LOADER*/
@@ -216,9 +261,11 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 	div.dropdown{
 		right: 0;
 		left: inherit;
+		top: -37px;
 		ul{
 		  transform: rotate(0deg);
 		  left: -25px;
+		  font-size: 0.6em;
 		}
 	}
 	nav div.logo-nav #nav{
