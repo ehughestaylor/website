@@ -348,6 +348,7 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 		  margin: 0 auto;
 		  float: right;
 		  transform: rotate(0deg);
+		  -webkit-transform: rotate(0deg);
 	}
 	div.dropdown ul li{
 	  font-size: 3.8em;
