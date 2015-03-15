@@ -288,13 +288,22 @@ figure {
     font-size: 3.2em; }
 
   div.dropdown {
-    right: 0;
-    left: inherit;
-    top: -37px; }
+    left: 0%;
+    top: 5%;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 900px;
+    width: 100%;
+    background: black; }
     div.dropdown ul {
       transform: rotate(0deg);
       left: -25px;
-      font-size: 0.6em; }
+      font-size: .6em;
+      position: relative;
+      bottom: 0; }
+      div.dropdown ul li {
+        font-size: 6.8em; }
 
   nav div.logo-nav #nav {
     margin-right: initial; } }
