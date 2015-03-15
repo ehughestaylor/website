@@ -324,27 +324,39 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 		font-size: 3.2em;
 	}
 	div.dropdown{
-		left: 0%;
-		top: 0;
-		border-left: none;
-		border-right: none;
-		border-top: none;
-		height: 1000px;
-		width: 100%;
-		background: rgba(0,0,0,0.8);
-		ul{
-		  transform: rotate(0deg);
-		  left: -25px;
-		  font-size: .6em;
-		  position: relative;
-		  bottom:0;
-		  li{
-		  	font-size: 8.8em;
-		  	text-align: right;
-		  }
-		}
+	  position: absolute;
+	  margin-left: 0;
+	  margin-right: 0;
+	  left: inherit;
+	  right: 0;
+	  top: 100px;
+	  width: 33%;
+	  height: 900px;
+	  background: rgba(0,0,0,0.6);
+	  border-left: 0;
+	  border-right: 0;
+	  border-top: 0;
+	}
+	div.dropdown ul {
+		transform: rotate(0deg);
+		  text-align: center;
+		  position: static;
+		  margin-left: auto;
+		  left: -150px;
+		  right: 0;
+		  bottom: 100%;
+		  margin: 0 auto;
+		  float: right;
+	}
+	div.dropdown ul li{
+	  font-size: 3.8em;
+	  margin: 2.3em auto;
+	  margin-right: 0.5em;
+	  color: white;
+	  text-align: center;
 	}
 	nav div.logo-nav #nav{
 	margin-right: initial;
 	}
+
 }
