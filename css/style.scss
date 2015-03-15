@@ -156,12 +156,11 @@ div.dropdown{
 }
 
 div.home-top{
-	height: 502px;
 	background: $darkgrey;
+	height: 502px;
+	
 	h1{
 	  font-size: 4.2em;
-	  min-height: 300px;
-	  max-height: 1122px;
 	  position: relative;
 	  line-height: 1.3em;
 	  padding-top: 1.5em;
