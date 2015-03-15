@@ -5,7 +5,7 @@ $(window).load(function() {
 
 $(document).ready(function(){
 	$('#nav').on('mouseenter', function(){
-    	$('.dropdown').fadeIn(function();
+    	$('.dropdown').fadeIn();
 	})
 	$('.dropdown').on('mouseleave', function(){
 		$(this).fadeOut();
