@@ -10,4 +10,7 @@ $(document).ready(function(){
 	$('.dropdown').on('mouseleave', function(){
 		$(this).fadeOut();
 	})
+	$('#nav').on('click', function(){
+    	$('.dropdown').fadeToggle();
+	})
 });

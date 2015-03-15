@@ -107,7 +107,8 @@ div.dropdown {
     left: -150px;
     right: 0;
     bottom: 100%;
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
     div.dropdown ul li {
       font-size: 1.8em;
       margin: 2.3em auto;
