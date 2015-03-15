@@ -272,5 +272,11 @@ figure {
 
   nav div.logo-nav #nav {
     margin-right: initial; } }
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
+  div.home-bottom div.project-left {
+    width: 100%; }
+
+  div.home-bottom div.about-right {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
