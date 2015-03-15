@@ -273,5 +273,8 @@ figure {
 
   nav div.logo-nav #nav {
     margin-right: initial; } }
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
+  div.home-top {
+    height: 1122px; } }
 
 /*# sourceMappingURL=style.css.map */
