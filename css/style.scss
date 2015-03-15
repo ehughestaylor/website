@@ -76,6 +76,9 @@ nav{
   position: absolute;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  	.bars{
+  		color: white;
+  	}
 	
 	/*social media section*/
 	div.social-media{
@@ -144,12 +147,12 @@ div.dropdown{
 			color: white;
 			text-align: center;
 			a{
-				color: white;
+				color: $gold;
 				text-align: center;
 				text-decoration: none;
 			}
 			a:hover{
-				color: $gold;
+				color: $orange;
 			}
 		}
 	}
@@ -245,7 +248,9 @@ div.home-bottom{
 }
 
 
-/*PAGE LOADER*/
+/***********
+PAGE LOADER
+***********/
 .se-pre-con {
 	width: 100%;
 	height: 174%;
@@ -283,7 +288,21 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 }
 .cube { -webkit-animation: rotate 3s infinite linear; }
 
-/*MEDIA QUERIES*/
+
+
+div.bars{
+	visibility: hidden;
+	cursor: pointer;
+	.exit{
+		display: none;
+		color: $gold;
+	}
+}
+
+
+/****************
+MEDIA QUERIES
+******************/
 @media only screen and (max-width: 800px){
 	div.home-bottom div.project-left,
 	div.home-bottom div.about-right{
@@ -305,10 +324,19 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 		margin-right: initial;
 	}
 }
+/*IPHONE 6 and +*/
 @media only screen 
-    and (max-device-width: 640px), 
-    only screen and (max-device-width: 667px), 
-    only screen and (max-device-width: 480px){
+and (max-device-width: 640px), 
+only screen and (max-device-width: 667px), 
+only screen and (max-device-width: 480px){
+	div.bars{
+	  display: inline-block;
+	  visibility: visible;
+	  font-size: 5em;
+	  position: absolute;
+	  top: 10%;
+	  right: 3%;
+	}
 	div.home-bottom div.project-left{
 		width: 100%;
 	}
@@ -359,8 +387,4 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 	  color: white;
 	  text-align: center;
 	}
-	nav div.logo-nav #nav{
-	margin-right: initial;
-	}
-
 }

@@ -67,6 +67,8 @@ nav {
   font-family: "Roboto", sans-serif;
   /*social media section*/
   /*logo section*/ }
+  nav .bars {
+    color: white; }
   nav div.social-media ul {
     position: absolute;
     top: 15px;
@@ -119,11 +121,11 @@ div.dropdown {
       color: white;
       text-align: center; }
       div.dropdown ul li a {
-        color: white;
+        color: #D7D923;
         text-align: center;
         text-decoration: none; }
       div.dropdown ul li a:hover {
-        color: #D7D923; }
+        color: #8C2E00; }
 
 div.home-top {
   background: #1C1A1A;
@@ -200,7 +202,9 @@ div.home-bottom {
       background-color: white;
       color: #1C1A1A; }
 
-/*PAGE LOADER*/
+/***********
+PAGE LOADER
+***********/
 .se-pre-con {
   width: 100%;
   height: 174%;
@@ -255,7 +259,16 @@ figure {
 .cube {
   -webkit-animation: rotate 3s infinite linear; }
 
-/*MEDIA QUERIES*/
+div.bars {
+  visibility: hidden;
+  cursor: pointer; }
+  div.bars .exit {
+    display: none;
+    color: #D7D923; }
+
+/****************
+MEDIA QUERIES
+******************/
 @media only screen and (max-width: 800px) {
   div.home-bottom div.project-left,
   div.home-bottom div.about-right {
@@ -272,7 +285,16 @@ figure {
 
   nav div.logo-nav #nav {
     margin-right: initial; } }
+/*IPHONE 6 and +*/
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-device-width: 480px) {
+  div.bars {
+    display: inline-block;
+    visibility: visible;
+    font-size: 5em;
+    position: absolute;
+    top: 10%;
+    right: 3%; }
+
   div.home-bottom div.project-left {
     width: 100%; }
 
@@ -321,9 +343,6 @@ figure {
     margin: 2.3em auto;
     margin-right: 0.5em;
     color: white;
-    text-align: center; }
-
-  nav div.logo-nav #nav {
-    margin-right: initial; } }
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

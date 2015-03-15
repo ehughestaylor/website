@@ -13,4 +13,9 @@ $(document).ready(function(){
 	$('#nav').on('click', function(){
     	$('.dropdown').fadeToggle();
 	})
+	$('.bars').on('click', function(){
+		$('.exit').slideToggle();
+		$('.fa-bars').fadeToggle();
+		$('.dropdown').slideToggle("slow");
+	})
 });
