@@ -50,7 +50,8 @@ STYLES START
 ******************/
 body {
   background-color: #1C1A1A;
-  font-family: "Noto Serif", serif; }
+  font-family: "Noto Serif", serif;
+  height: 100%; }
 
 .opaque {
   transition-duration: 0.5s;

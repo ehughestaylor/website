@@ -62,6 +62,7 @@ $secondfont: 'Roboto', sans-serif;
 body{
 	background-color: $darkgrey;
 	font-family: $mainfont;	
+	height: 100%;
 }
 .opaque{
 	transition-duration:0.5s;
