@@ -144,7 +144,7 @@ div.home-top {
       text-align: center; } }
 
 div.home-bottom {
-  background-color: black; }
+  background-color: #1C1A1A; }
   div.home-bottom div.project-left {
     background-size: 100% 100%;
     background: #6cab26;
@@ -282,10 +282,12 @@ figure {
   div.home-top {
     background: #1C1A1A;
     height: 1000px;
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    text-align: center; }
 
   nav div.social-media ul li {
-    font-size: 3.2em; }
+    font-size: 3.2em;
+    margin-right: 1em; }
 
   div.dropdown {
     position: absolute;
