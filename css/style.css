@@ -289,13 +289,13 @@ figure {
 
   div.dropdown {
     left: 0%;
-    top: 5%;
+    top: 0;
     border-left: none;
     border-right: none;
     border-top: none;
-    height: 910px;
+    height: 1000px;
     width: 100%;
-    background: black; }
+    background: rgba(0, 0, 0, 0.8); }
     div.dropdown ul {
       transform: rotate(0deg);
       left: -25px;
@@ -303,7 +303,8 @@ figure {
       position: relative;
       bottom: 0; }
       div.dropdown ul li {
-        font-size: 6.8em; }
+        font-size: 8.8em;
+        text-align: right; }
 
   nav div.logo-nav #nav {
     margin-right: initial; } }
