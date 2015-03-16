@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<title>Elliott Hughes-Taylor Front End Web Developer</title>
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Noto+Serif|Roboto:400,100,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<style>
 		/* This only works with JavaScript, 
@@ -42,17 +44,39 @@
 		<div class="logo-nav">
 			<img id="nav" src="images/logo.png" alt="">
 		</div>
-		<div class="bars">
-			<i class="fa fa-bars"></i>
-			<i class="exit fa fa-times"></i>
-		</div>
 	</nav>
+<nav id="bootstrap" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
 	<div class="home-top">
 		<h1> Hi I'm Elliott. 
 		<br>I am a front-end web developer.
 		<br> Welcome.</h1>		
 	</div>
-	<div class="dropdown" style="display:none">
+	<div class="dropdown-home" style="display:none">
 		<ul>
 			<li><a href="">about</a></li>
 			<li><a href="">portfolio</a></li>
@@ -63,11 +87,10 @@
 
 	<div class="home-bottom">
 		<div class="project-left">
-
-			<h1>projects</h1>
+			<h1 id="projects">projects</h1>
 		</div>
 		<div class="about-right">
-			<h1>about</h1>
+			<h1 id="about">about</h1>
 
 		</div>
 	</div>

@@ -76,7 +76,7 @@ nav {
     nav div.social-media ul li {
       display: inline-block;
       font-size: 1.5em;
-      width: 50px;
+      width: 35px;
       color: white;
       cursor: pointer;
       transition-duration: 0.3s; }
@@ -92,7 +92,7 @@ nav {
     cursor: pointer;
     transition-duration: 0.5s; }
 
-div.dropdown {
+div.dropdown-home {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -105,7 +105,7 @@ div.dropdown {
   border-left: 335px solid transparent;
   border-right: 335px solid transparent;
   border-top: 335px solid rgba(0, 0, 0, 0.7); }
-  div.dropdown ul {
+  div.dropdown-home ul {
     text-align: center;
     position: absolute;
     margin-left: auto;
@@ -115,16 +115,16 @@ div.dropdown {
     bottom: 100%;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg); }
-    div.dropdown ul li {
+    div.dropdown-home ul li {
       font-size: 1.8em;
       margin: 2.3em auto;
       color: white;
       text-align: center; }
-      div.dropdown ul li a {
+      div.dropdown-home ul li a {
         color: #D7D923;
         text-align: center;
         text-decoration: none; }
-      div.dropdown ul li a:hover {
+      div.dropdown-home ul li a:hover {
         color: #8C2E00; }
 
 div.home-top {
@@ -146,7 +146,8 @@ div.home-top {
       text-align: center; } }
 
 div.home-bottom {
-  background-color: #1C1A1A; }
+  background-color: #1C1A1A;
+  width: 100%; }
   div.home-bottom div.project-left {
     background-size: 100% 100%;
     background: #6cab26;
@@ -170,10 +171,12 @@ div.home-bottom {
       color: white;
       margin-right: 1em;
       margin-top: 0.5em;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: white;
+      color: #1C1A1A; }
     div.home-bottom div.project-left h1:hover {
-      color: #1C1A1A;
-      background-color: white; }
+      color: white;
+      background-color: transparent; }
   div.home-bottom div.about-right {
     background-size: 100% 100%;
     background: #6cab26;
@@ -194,13 +197,18 @@ div.home-bottom {
       padding: 0.5em;
       display: inline;
       float: left;
-      color: white;
       margin-left: 1em;
       margin-top: 0.5em;
-      cursor: pointer; }
-    div.home-bottom div.about-right h1:hover {
+      cursor: pointer;
       background-color: white;
       color: #1C1A1A; }
+    div.home-bottom div.about-right h1:hover {
+      background-color: transparent;
+      color: white; }
+  div.home-bottom .full-width {
+    width: 100%;
+    height: 1000px;
+    background-color: pink; }
 
 /***********
 PAGE LOADER
@@ -259,12 +267,81 @@ figure {
 .cube {
   -webkit-animation: rotate 3s infinite linear; }
 
-div.bars {
-  visibility: hidden;
-  cursor: pointer; }
-  div.bars .exit {
-    display: none;
-    color: #D7D923; }
+/*BOOTSTRAP CUSTOM STYLES*/
+#bootstrap {
+  display: none;
+  box-shadow: none;
+  width: 40%;
+  font-family: "Roboto", sans-serif; }
+
+.navbar-default {
+  background-color: transparent;
+  /* border-color: #e7e7e7; */ }
+
+.navbar {
+  position: fixed;
+  min-height: 50px;
+  width: 100%;
+  right: 0;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  clear: both; }
+
+.navbar-header {
+  width: 10%;
+  float: right; }
+
+.navbar-nav {
+  margin: 0 auto;
+  padding-top: 1em; }
+
+/*NAVBAR DROPDOWNBUTTON*/
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: white;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: black;
+  border-color: transparent; }
+  .navbar-default .navbar-toggle:hover .icon-bar,
+  .navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: white; }
+
+/*BARS*/
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #1C1A1A; }
+
+/*DROPDOWN*/
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: black;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  margin-top: 42px; }
+
+.nav > li {
+  padding: 2.5em 0; }
+
+/*bootstrap dropdown list items and anchors*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: black;
+  color: white; }
+
+.navbar-default .navbar-nav > li > a {
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase; }
 
 /****************
 MEDIA QUERIES
@@ -274,75 +351,75 @@ MEDIA QUERIES
   div.home-bottom div.about-right {
     width: 100%; } }
 @media only screen and (max-width: 600px) {
-  div.dropdown {
+  #bootstrap {
+    display: block; }
+
+  div.dropdown-home {
     right: 0;
     left: inherit;
-    top: -37px; }
-    div.dropdown ul {
+    top: -37px;
+    visibility: hidden; }
+    div.dropdown-home ul {
       transform: rotate(0deg);
       left: -25px;
       font-size: 0.6em; }
 
   nav div.logo-nav #nav {
-    margin-right: initial; } }
+    margin-right: auto; } }
 /*IPHONE 6 and +*/
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-device-width: 480px) {
-  div.bars {
-    display: inline-block;
-    visibility: visible;
-    font-size: 5em;
-    position: absolute;
-    top: 10%;
-    right: 3%; }
-
-  div.home-bottom div.project-left {
-    width: 100%; }
-
-  div.home-bottom div.about-right {
-    width: 100%; }
-
-  div.home-top {
-    background: #1C1A1A;
-    height: 1000px;
-    font-size: 1.8em;
-    text-align: center; }
-
-  nav div.social-media ul li {
-    font-size: 3.2em;
-    margin-right: 1em; }
-
-  div.dropdown {
-    position: absolute;
-    margin-left: 0;
-    margin-right: 0;
-    left: inherit;
-    right: 0;
-    top: 100px;
-    width: 33%;
-    height: 900px;
-    background: rgba(0, 0, 0, 0.6);
-    border-left: 0;
-    border-right: 0;
-    border-top: 0; }
-
-  div.dropdown ul {
-    transform: rotate(0deg);
-    text-align: center;
-    position: static;
-    margin-left: auto;
-    left: -150px;
-    right: 0;
-    bottom: 100%;
-    margin: 0 auto;
-    float: right;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg); }
-
-  div.dropdown ul li {
-    font-size: 3.8em;
-    margin: 2.3em auto;
-    margin-right: 0.5em;
-    color: white;
-    text-align: center; } }
+  /*	.navbar-toggle {
+    		display: block;
+  	}
+  	div.home-bottom div.project-left{
+  		width: 100%;
+  	}
+  	div.home-bottom div.about-right{
+  		width: 100%;
+  	}
+  	div.home-top{
+  	  background: #1C1A1A;
+  	  height: 1000px;
+  	  font-size: 1.8em;
+  	  text-align: center;
+  	}
+  	nav div.social-media ul li{
+  		font-size: 3.2em;
+  		margin-right: 1em;
+  	}
+  	div.dropdown-home{
+  	  position: absolute;
+  	  margin-left: 0;
+  	  margin-right: 0;
+  	  left: inherit;
+  	  right: 0;
+  	  top: 100px;
+  	  width: 33%;
+  	  height: 900px;
+  	  background: rgba(0,0,0,0.6);
+  	  border-left: 0;
+  	  border-right: 0;
+  	  border-top: 0;
+  	}
+  	div.dropdown-home ul {
+  		transform: rotate(0deg);
+  		  text-align: center;
+  		  position: static;
+  		  margin-left: auto;
+  		  left: -150px;
+  		  right: 0;
+  		  bottom: 100%;
+  		  margin: 0 auto;
+  		  float: right;
+  		  transform: rotate(0deg);
+  		  -webkit-transform: rotate(0deg);
+  	}
+  	div.dropdown-home ul li{
+  	  font-size: 3.8em;
+  	  margin: 2.3em auto;
+  	  margin-right: 0.5em;
+  	  color: white;
+  	  text-align: center;
+  	}*/ }
 
 /*# sourceMappingURL=style.css.map */
