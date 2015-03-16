@@ -372,6 +372,7 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 
 /*ICON BARS*/
 .navbar-toggle {
+  filter: alpha(opacity=0);
   z-index: 99;
   border: none;
   background: transparent !important;
@@ -382,34 +383,50 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 
  .icon-bar {
     width: 22px;
-    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s;
     background-color: white;
  }
   .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 10% 10%;
+        -ms-transform-origin: 10% 10%;
+            transform-origin: 10% 10%;
  }
   .middle-bar {
     opacity: 0;
+    filter: alpha(opacity=0);
   }
   .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 10% 90%;
+        -ms-transform-origin: 10% 90%;
+            transform-origin: 10% 90%;
   }
 }
 
 .navbar-toggle.collapsed {
+  filter: alpha(opacity=100);
 	.icon-bar{
 		background-color: $gold;
 	}
   .top-bar {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
   }
   .middle-bar {
     opacity: 1;
+    filter: alpha(opacity=100);
   }
   .bottom-bar {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
