@@ -337,18 +337,6 @@ figure { -webkit-transform-origin: 50% 50% 0; }
   border: 1px solid transparent;
   border-radius: 0;
 }
-/*.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus{
-	background-color: black;
-	border-color: transparent;
-	.icon-bar{
-		background-color: white;
-	}
-}*/
-/*BARS*/
-.navbar-default .navbar-toggle .icon-bar{
-	background-color: yellow;
-}
 
 /*DROPDOWN*/
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -374,6 +362,8 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 	text-transform: uppercase;
 }
 
+
+/*ICON BARS*/
 .navbar-toggle {
   z-index: 99;
   border: none;
@@ -390,14 +380,18 @@ figure { -webkit-transform-origin: 50% 50% 0; }
  }
   .top-bar {
     transform: rotate(45deg);
+    -webkit-transform:rotate(-45deg);
     transform-origin: 10% 10%;
+    -webkit-transform-origin: 10% 10%;
  }
   .middle-bar {
     opacity: 0;
   }
   .bottom-bar {
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     transform-origin: 10% 90%;
+    -webkit-transform-origin: 10% 90%;
   }
 }
 
@@ -407,12 +401,14 @@ figure { -webkit-transform-origin: 50% 50% 0; }
 	}
   .top-bar {
     transform: rotate(0);
+    -webkit-transform: rotate(0);
   }
   .middle-bar {
     opacity: 1;
   }
   .bottom-bar {
     transform: rotate(0);
+    -webkit-transform:rotate(0);
   }
 }
 

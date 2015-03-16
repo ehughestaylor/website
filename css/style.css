@@ -308,18 +308,6 @@ figure {
   border: 1px solid transparent;
   border-radius: 0; }
 
-/*.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus{
-	background-color: black;
-	border-color: transparent;
-	.icon-bar{
-		background-color: white;
-	}
-}*/
-/*BARS*/
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: yellow; }
-
 /*DROPDOWN*/
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: black;
@@ -342,6 +330,7 @@ figure {
   font-size: 1.2em;
   text-transform: uppercase; }
 
+/*ICON BARS*/
 .navbar-toggle {
   z-index: 99;
   border: none;
@@ -354,21 +343,27 @@ figure {
     background-color: white; }
   .navbar-toggle .top-bar {
     transform: rotate(45deg);
-    transform-origin: 10% 10%; }
+    -webkit-transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+    -webkit-transform-origin: 10% 10%; }
   .navbar-toggle .middle-bar {
     opacity: 0; }
   .navbar-toggle .bottom-bar {
     transform: rotate(-45deg);
-    transform-origin: 10% 90%; }
+    -webkit-transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    -webkit-transform-origin: 10% 90%; }
 
 .navbar-toggle.collapsed .icon-bar {
   background-color: #D7D923; }
 .navbar-toggle.collapsed .top-bar {
-  transform: rotate(0); }
+  transform: rotate(0);
+  -webkit-transform: rotate(0); }
 .navbar-toggle.collapsed .middle-bar {
   opacity: 1; }
 .navbar-toggle.collapsed .bottom-bar {
-  transform: rotate(0); }
+  transform: rotate(0);
+  -webkit-transform: rotate(0); }
 
 /****************
 MEDIA QUERIES
