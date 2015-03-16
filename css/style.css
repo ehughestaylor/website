@@ -308,24 +308,23 @@ figure {
   border: 1px solid transparent;
   border-radius: 0; }
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: black;
-  border-color: transparent; }
-  .navbar-default .navbar-toggle:hover .icon-bar,
-  .navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: white; }
-
+/*.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus{
+	background-color: black;
+	border-color: transparent;
+	.icon-bar{
+		background-color: white;
+	}
+}*/
 /*BARS*/
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #1C1A1A; }
+  background-color: yellow; }
 
 /*DROPDOWN*/
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: black;
   text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-  margin-top: 42px; }
+  background: rgba(0, 0, 0, 0.9); }
 
 .nav > li {
   padding: 2.5em 0; }
@@ -342,6 +341,34 @@ figure {
   color: white;
   font-size: 1.2em;
   text-transform: uppercase; }
+
+.navbar-toggle {
+  z-index: 99;
+  border: none;
+  background: transparent !important; }
+  .navbar-toggle:hover {
+    background: transparent !important; }
+  .navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+    background-color: white; }
+  .navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%; }
+  .navbar-toggle .middle-bar {
+    opacity: 0; }
+  .navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%; }
+
+.navbar-toggle.collapsed .icon-bar {
+  background-color: #D7D923; }
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0); }
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1; }
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0); }
 
 /****************
 MEDIA QUERIES
@@ -367,59 +394,5 @@ MEDIA QUERIES
   nav div.logo-nav #nav {
     margin-right: auto; } }
 /*IPHONE 6 and +*/
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-device-width: 480px) {
-  /*	.navbar-toggle {
-    		display: block;
-  	}
-  	div.home-bottom div.project-left{
-  		width: 100%;
-  	}
-  	div.home-bottom div.about-right{
-  		width: 100%;
-  	}
-  	div.home-top{
-  	  background: #1C1A1A;
-  	  height: 1000px;
-  	  font-size: 1.8em;
-  	  text-align: center;
-  	}
-  	nav div.social-media ul li{
-  		font-size: 3.2em;
-  		margin-right: 1em;
-  	}
-  	div.dropdown-home{
-  	  position: absolute;
-  	  margin-left: 0;
-  	  margin-right: 0;
-  	  left: inherit;
-  	  right: 0;
-  	  top: 100px;
-  	  width: 33%;
-  	  height: 900px;
-  	  background: rgba(0,0,0,0.6);
-  	  border-left: 0;
-  	  border-right: 0;
-  	  border-top: 0;
-  	}
-  	div.dropdown-home ul {
-  		transform: rotate(0deg);
-  		  text-align: center;
-  		  position: static;
-  		  margin-left: auto;
-  		  left: -150px;
-  		  right: 0;
-  		  bottom: 100%;
-  		  margin: 0 auto;
-  		  float: right;
-  		  transform: rotate(0deg);
-  		  -webkit-transform: rotate(0deg);
-  	}
-  	div.dropdown-home ul li{
-  	  font-size: 3.8em;
-  	  margin: 2.3em auto;
-  	  margin-right: 0.5em;
-  	  color: white;
-  	  text-align: center;
-  	}*/ }
 
 /*# sourceMappingURL=style.css.map */
