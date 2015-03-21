@@ -214,7 +214,7 @@ div.nav-trigger:hover{
 	.line,
 	.line:first-child,
 	.line:last-child{
-		background-color: $seablue;
+		background-color: $red;
 	}
 }
 /*navigation*/
@@ -314,5 +314,36 @@ div.recent{
 	width: 100%;
 
 }
+
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{
+
+	.title-text{
+		h1{
+			font-size: 2.3em;
+			margin-bottom: .8em;
+		}
+	}
+
+	.nav-full{
+		overflow-y: hidden;
+		.flex-nav{
+			width: 100%;
+		
+			.item-nav{
+				height: 150px;
+
+				a{
+					line-height: 150px;
+				}
+			}
+		}
+	}
+
+ }
+
 
 
