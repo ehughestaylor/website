@@ -65,15 +65,20 @@ body {
     font-size: 24px;
     color: #7f7f7f;
     background: white;
-    overflow: hidden;
-    height: 1000px;
     background-color: $background;
+}
+
+div.wrapper-top{
+
 }
 
 header{
 	height: 75px;
-	background-color: $background;
-
+	background-color: transparent;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	transition-duration:1s;
 	.logo{
 		height: 50px;
 		width: 50px;
@@ -81,7 +86,19 @@ header{
 		left: 20px;
 		top: 8px;
 	}
+	.logo-big{
+		height: 65px;
+		width: 65px;
+		top: 5px;
+	}
 }
+.black{
+	background-color: rgba(0,0,0,0.3);
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
 
 
 /*navigation-trigger*/
@@ -207,7 +224,7 @@ div.nav-trigger:hover{
 	width: 100%;
 	display: none;
 	background-color: rgba(165,140,64,0.6);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	text-align: center;
 	overflow: scroll;
@@ -265,13 +282,37 @@ div.nav-trigger:hover{
 		padding: 1em;
 		margin-top: 1em;
 		border: 2px solid white;
+		transition-duration:0.5s;
 	}
 	button:hover{
 		background-color: white;
 		color: $background;
+		transition-duration:0.5s;
 
+	}
+	div.fa-chevron-down{
+		display: block;
+		margin-top: 2em;
+		font-size: 1.3em;
+		color: white;
+		width: 10px;
+		margin: 2em auto;
+		transition-duration:0.3s;
+	}
+	div.fa-chevron-down:hover{
+		color: $gold;
+		cursor: pointer;
+		transition-duration:0.3s;
 	}
 }
 
+/*recent work and posts*/
+
+div.recent{
+	height: 1000px;
+	background: lightgray;
+	width: 100%;
+
+}
 
 

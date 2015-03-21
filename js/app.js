@@ -8,4 +8,13 @@ var navFunc = function(){
 
 $(document).ready(function(){
 	navFunc();
+
+	var waypoint = new Waypoint({
+  		element: document.getElementById('section2'),
+  		handler: function() {
+    	 $('header').toggleClass('black');
+    	 $('.logo').toggleClass('logo-big').toggleClass('animated rotateIn');
+  }
+})
+
 });
