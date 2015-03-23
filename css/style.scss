@@ -79,6 +79,7 @@ header{
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 99999999;
 	transition-duration:1s;
 	.logo{
 		height: 50px;
@@ -94,10 +95,11 @@ header{
 	}
 	.project-header{
 	  position: absolute;
-	  right: 75px;
+	  left: 95px;
 	  top: 35%;
 	  font-size: 1em;
-	  color: $red;
+	  color: $seablue;
+	  text-shadow: 0.6px 0.6px 0.6px rgba(0,0,0,0.7);
 	  font-family: $oxygen;
 	}
 }
@@ -327,7 +329,7 @@ div.projects{
 	width: 100%;
 	height: 100%;
 	.port-container{
-		width: 66.6664%;
+		width: 82%;
 		padding-top: 3em;
 		margin: 0 auto;
 		display: flex;
@@ -342,19 +344,58 @@ div.projects{
 		text-align: center;
 
 		.about-port{
-			width: 100%;
-			height: 300px;
-			background: white;
+			width: 338px;
 			display: inline-block;
-			flex-grow: 3;
+			float: right;
+			background: #235D8E;
+			
+			.row{
+				width: 90%;
+				margin: 1em auto;
+				color: black;
+				line-height: 1.3em;
+				letter-spacing: .094em;
+				p{
+					margin-bottom: 0.8em;
+				}
+			}
+
 		}
+		
+		@media only screen and (max-width: 850px){
+			.about-port{
+				width: 100%;
+			}
+		}
+
 		.port-item{
 			height: 250px;
 			width: 350px;
 			margin: 1em auto;
-			padding: 0em 0.4em;
 			background: white;
 			display: inline-block;
+			background: transparent;
+			cursor: pointer;
+			-webkit-filter: grayscale(100%);
+			  -webkit-transition: all 1s ease;
+		     -moz-transition: all 1s ease;
+		       -o-transition: all 1s ease;
+		      -ms-transition: all 1s ease;
+		          transition: all 1s ease;
+
+			img{
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.port-item:last-child{
+			img{
+				width: 250px;
+				background: $gold;
+			}
+		}
+		.port-item:hover{
+			-webkit-filter: grayscale(0%);
 		}
 
 	}
