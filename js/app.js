@@ -8,12 +8,15 @@ var navFunc = function(){
 
 $(document).ready(function(){
 	navFunc();
+	$('.project-header').hide();
 
 	var waypoint = new Waypoint({
   		element: document.getElementById('section2'),
   		handler: function() {
-    	 $('header').toggleClass('black');
+    	 $('header').toggleClass('clear');
     	 $('.logo').toggleClass('logo-big').toggleClass('animated rotateIn');
+    	 $('.project-header').slideToggle();
+    	 $('.line').toggleClass('black');
   }
 })
 
