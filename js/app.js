@@ -4,6 +4,12 @@ var navFunc = function(){
 		$('.nav-full').slideToggle();
 	});
 }
+$(".port-button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#section2").offset().top
+    }, 1000);
+    $('.nav-full').fadeOut();
+});
 
 
 $(document).ready(function(){
