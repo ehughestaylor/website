@@ -53,6 +53,10 @@ body {
   background-color: #1C1A1A;
   overflow-x: hidden; }
 
+.blue {
+  color: #326883 !important;
+  transition-duration: 0.5s; }
+
 header {
   height: 75px;
   background-color: transparent;
@@ -71,7 +75,8 @@ header {
     height: 65px;
     width: 65px;
     top: 5px; }
-  header .project-header {
+  header .project-header,
+  header .bio-header {
     position: absolute;
     left: 95px;
     top: 35%;
@@ -82,6 +87,16 @@ header {
 
 .clear {
   background: transparent; }
+
+.bio-header {
+  position: fixed;
+  left: 85px;
+  top: 4%;
+  font-size: 1em;
+  color: white;
+  text-shadow: 0.6px 0.6px 0.6px rgba(0, 0, 0, 0.7);
+  font-family: "Oxygen", sans-serif;
+  z-index: 99; }
 
 /*navigation-trigger*/
 .nav-trigger {
@@ -227,87 +242,66 @@ div.nav-trigger:hover .line:last-child {
         font-family: "Oxygen", sans-serif;
         text-decoration: none; }
 
-.title-text {
+.top-section .title-text {
   text-align: center;
   color: white;
-  font-family: 'Droid Serif', serif;
-  margin-top: 4em; }
-  .title-text h1 {
+  font-family: 'Droid Serif', serif; }
+  .top-section .title-text h1 {
     font-size: 3.0em;
+    margin-top: 0.2em;
     margin-bottom: 0.2em; }
-  .title-text h3 {
+  .top-section .title-text h3 {
     margin-bottom: 0em;
     font-size: 1.7em; }
-  .title-text h5 {
+  .top-section .title-text h5 {
     line-height: 1.2em;
     color: #A58C40;
     margin-top: 0.7em;
     margin-bottom: 0.3em;
     text-shadow: 0.2px 0.5px 3px black; }
-  .title-text button {
+  .top-section .title-text button {
     background-color: transparent;
     color: white;
     padding: 1em;
     margin-top: 1em;
     border: 2px solid white;
     transition-duration: 0.5s; }
-  .title-text button:hover {
+  .top-section .title-text button:hover {
     background-color: white;
     color: #1C1A1A;
     transition-duration: 0.5s; }
-  .title-text div.fa-chevron-down {
+  .top-section .title-text div.fa-chevron-down {
     display: block;
     margin-top: 2em;
     font-size: 1.3em;
     color: white;
     width: 10px;
-    margin: 2em auto;
+    margin: 1em auto;
     transition-duration: 0.3s; }
-  .title-text div.fa-chevron-down:hover {
+  .top-section .title-text div.fa-chevron-down:hover {
     color: #A58C40;
     cursor: pointer;
     transition-duration: 0.3s; }
 
 /*recent work and posts*/
-div.projects {
+div#section2 {
   background: #A58C40;
   width: 100%;
-  height: 100%; }
-  div.projects .port-container {
-    width: 83%;
+  position: relative; }
+  div#section2 .port-container {
+    width: 100%;
     padding-top: 3em;
     margin: 0 auto;
     display: flex; }
   @media only screen and (max-width: 600px) {
-    div.projects .port-container {
+    div#section2 .port-container {
       width: 100%; } }
-  div.projects .portfolio {
-    margin-top: 2em;
+  div#section2 .portfolio {
     text-align: center; }
-    div.projects .portfolio .about-port {
-      width: 338px;
-      display: inline-block;
-      float: right;
-      text-shadow: 0.2px 0.2px 1px rgba(0, 0, 0, 0.6);
-      background: white;
-      border: 4px solid #1C1A1A;
-      box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-      font-family: "Oxygen", sans-serif; }
-      div.projects .portfolio .about-port .row {
-        width: 90%;
-        margin: 1em auto;
-        color: black;
-        line-height: 1.3em;
-        letter-spacing: .094em; }
-        div.projects .portfolio .about-port .row p {
-          margin-bottom: 0.8em; }
-    @media only screen and (max-width: 850px) {
-      div.projects .portfolio .about-port {
-        width: 100%; } }
-    div.projects .portfolio .port-item {
-      height: 250px;
-      width: 350px;
-      margin: 1em auto;
+    div#section2 .portfolio .port-item {
+      height: 200px;
+      width: 300px;
+      margin: 1em;
       background: white;
       display: inline-block;
       position: relative;
@@ -321,12 +315,12 @@ div.projects {
       -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
       transition: all 1s ease; }
-      div.projects .portfolio .port-item img {
+      div#section2 .portfolio .port-item img {
         height: 100%;
         width: 100%;
         transform: scaleY(1);
         transition: all 0.7s ease-in-out; }
-      div.projects .portfolio .port-item .mask {
+      div#section2 .portfolio .port-item .mask {
         width: 350px;
         height: 250px;
         display: inline-block;
@@ -339,19 +333,19 @@ div.projects {
         transition: all 0.5s linear;
         font-family: "Oxygen", sans-serif;
         color: white; }
-        div.projects .portfolio .port-item .mask h2 {
+        div#section2 .portfolio .port-item .mask h2 {
           font-size: 1.2em;
           margin-bottom: 1em;
           margin-top: 0.4em; }
-        div.projects .portfolio .port-item .mask p {
+        div#section2 .portfolio .port-item .mask p {
           font-size: 0.6em;
           margin: 0 auto;
           width: 80%;
           text-align: left;
           line-height: 1.2em; }
-    div.projects .portfolio .port-item:hover {
+    div#section2 .portfolio .port-item:hover {
       border: 10px solid #1C1A1A; }
-    div.projects .portfolio .port-item:hover img {
+    div#section2 .portfolio .port-item:hover img {
       -webkit-transform: scale(10);
       -moz-transform: scale(10);
       -o-transform: scale(10);
@@ -360,11 +354,78 @@ div.projects {
       -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
       filter: alpha(opacity=0);
       opacity: 0; }
-    div.projects .portfolio .port-item:hover .mask {
+    div#section2 .portfolio .port-item:hover .mask {
       -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
       filter: alpha(opacity=100);
       opacity: 1; }
 
+/*About section*/
+div#section1 {
+  background-color: white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: auto;
+  position: relative; }
+  div#section1 .column-left {
+    height: 100vh; }
+    div#section1 .column-left .block {
+      height: 48%;
+      width: 100%;
+      margin: 1em auto;
+      position: absolute;
+      left: 0;
+      top: 30%; }
+  div#section1 .column-right {
+    height: 100vh; }
+    div#section1 .column-right .block {
+      height: 48%;
+      width: 100%;
+      margin: 1em auto;
+      position: absolute;
+      left: 0;
+      top: 30%;
+      line-height: 100%; }
+  div#section1 .column-middle {
+    background-color: white;
+    height: auto; }
+    div#section1 .column-middle span {
+      font-size: 2.3em;
+      text-transform: lowercase;
+      font-family: "Bitter", serif;
+      color: black;
+      cursor: pointer; }
+      div#section1 .column-middle span h1 {
+        margin: 1em auto; }
+    div#section1 .column-middle .travel,
+    div#section1 .column-middle .art,
+    div#section1 .column-middle .family {
+      text-align: center;
+      vertical-align: middle; }
+    div#section1 .column-middle .me {
+      text-align: right; }
+  div#section1 .photos {
+    visibility: hidden; }
+
+.philly-right {
+  display: none; }
+
+.art-right {
+  display: none; }
+
+.traveling-left {
+  display: none; }
+
+.family-left {
+  display: none; }
+
+@media (max-width: 992px) {
+  .col-md-3 {
+    display: none;
+    visibility: hidden; }
+
+  .col-md-6 {
+    width: 80%;
+    margin: 0 auto; } }
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
   .title-text h1 {
     font-size: 2.3em;
