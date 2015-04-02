@@ -16,7 +16,6 @@
 		.no-js #loader { display: none;	}
 		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
 	</style>
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body style="container-fluid">
@@ -38,23 +37,21 @@
 		<div class="nav-full">
 			<div class="flex-nav">
 				<div class="item-nav">
-					<a href="#">home</a>
+					<a class="home-button" href="#">home</a>
 				</div>
 				<div class="item-nav">
-					<a href="#">about</a>
+					<a class="about-button" href="#">about</a>
 				</div>
 				<div class="item-nav">
 					<a class="port-button" href="#">portfolio</a>
 				</div>
 				<div class="item-nav">
-					<a href="#">contact</a>
+					<a class="contact-button" href="#">contact</a>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!-- full-nav -->
-<div id="fullpage">
-	<div class="section">
 		<div class="top-section">
 			<div class="title-text">
 				<h1>Elliott-Hughes-Taylor</h1>
@@ -63,23 +60,18 @@
 				<h5>designer</h5>
 				<h5>developer</h5>
 
-				<button class="port-button"> more of me </button>
+				<button class="port-button">recent work </button>
 
 				<div class="fa fa-chevron-down"></div>
 			</div>
 		</div>
-	</div>
-	<div class="section">
 		<div id="section1" class="row about"> 
-			<div class="bio-header"> 
-				<h1>About Me</h1>
-			</div>
 			<div class="col-md-3 column-left">
 				<div class="block traveling-left">
 					<img class="img-responsive" src="images/egypt.jpg" alt="">
 				</div>
 				<div class="block family-left">
-					<img class="img-responsive" src="images/egypt.jpg" alt="">
+					<img class="img-responsive" src="images/family.jpg" alt="">
 				</div>
 			</div>
 			<div class="col-md-6 column-middle">
@@ -87,76 +79,79 @@
 				<span class="travel"><h1>Traveling</h1></span>
 				<span class="art"><h1>Art</h1></span>
 				<span class="family"><h1>Family</h1></span>
-				<span class="me"><h1>Me</h1></span>
+				<span class="me"><h1>* = Me</h1></span>
 			</div>
 			<div class="col-md-3 column-right">
 				<div class="block philly-right">
-					<img class="img-responsive" src="images/egypt.jpg" alt="">				
+					<img class="img-responsive" src="images/city.jpg" alt="">				
 				</div>
 				<div class="block art-right">
-					<img class="img-responsive" src="images/egypt.jpg" alt="">
+					<img class="img-responsive" src="images/art.jpg" alt="">
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="section">
 	<div id="section2" class="projects">
 		<div class="port-container">
 			<div class="portfolio">
 					<div id="first" class="port-item"><img src="images/monarch.jpg" alt="">
-						<div class="mask">
+						<a href="http://monarchs.herokuapp.com"><div class="mask">
 							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>
+							<p>This is the official website for the Marian Anderson Monarchs we are still waiting on video to finish to project off.</p>
+						</div></a>
 					</div>
 					<div class="port-item">
 						<img src="images/insta.jpg" alt="">
-						<div class="mask">
-							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>
+						<a href="http://ehughestaylor.github.io/insta-search/main.html"><div class="mask">
+							<h2>Instasearch web app</h2>
+							<p>This is an application I built that uses the instagram API and google maps API to search for the most recent posted photos in a given location.</p>
+						</div></a>
 					</div>
 					<div class="port-item">
 						<img src="images/shawn.jpg" alt="">
-						<div class="mask">
-							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>
+						<a href="http://ehughestaylor.github.io/shawn_web"><div class="mask">
+							<h2>Photography</h2>
+							<p>This is a photography portfolio website.  I am currently building it out with meteor so that a specified user can look at his or her photos that the photographer has taken for the customer on the website rather then painfully emailing all of the photos. </p>
+						</div></a>
 					</div>
 					<div class="port-item">
 						<img src="images/got.jpg" alt="">
-						<div class="mask">
-							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>						
+						<a href="http://ehughestaylor.github.io/GoTquiz"><div class="mask">
+							<h2>Game of Thrones Quiz</h2>
+							<p>This is the first quiz app I built with javascript. Pretty trivial but I love GoT so I had to put it on here. </p>
+						</div></a>					
 					</div>
 					<div class="port-item">
 						<img src="images/ryu.jpg" alt="">
-						<div class="mask">
-							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>
+						<a href="http://ehughestaylor.github.io/jquery-streetfighter/main.html"><div class="mask">
+							<h2>Ryu</h2>
+							<p>Through my time at Thinkful this was one of my favorite projects.  Very small and simple but it really showed me the power of javascript and got me hooked!</p>
+						</div></a>
 					</div>
 					<div class="port-item">
 						<img src="images/tball.jpg" alt="">
-						<div class="mask">
-							<h2>Anderson Monarch's Website</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum autem quasi architecto officia laborum libero consequuntur aliquid et cupiditate ad, similique dolore sed velit, excepturi earum magni, optio, porro.</p>
-						</div>
+						<a href="http://mandersontball.meteor.com"><div class="mask">
+							<h2>Sign up Application</h2>
+							<p> This was a much needed quick deployment application that I built out with meteor. It saves a ton of time for the baseball club and it saves a ton of people the trouble of dealing with paperwork. </p>
+						</div></a>
 					</div>
 			</div>
 		</div>	
+	</div>
 	<!--end of section 2 -->
+	<div id="section3" class="contact">
+		<div class="social">
+			<ul id="social">
+				<li><a href="https://www.facebook.com/ehughestaylor"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/ehugstaylor"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://github.com/ehughestaylor"><i class="fa fa-github"></i></a></li>
+				<li><a href="mailto:ehughespt@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			</ul>
 		</div>
 	</div>
-</div>
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-	 	<script src="js/bootstrap.min.js"></script>
 	 	<script src="js/noframework.waypoints.min.js"></script>
-	 	<script src="js/vendors/jquery.slimscroll.min.js"></script>
-	 	<script src="js/jquery.fullPage.min.js"></script>
-	 	<script src="js/vendors/jquery.easings.min.js"></script>
+	 	<script src="js/bootstrap.min.js"></script>
 	 	<script src="js/app.js"></script>
 </body>	
 </html>
